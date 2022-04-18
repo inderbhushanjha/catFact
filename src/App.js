@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [fact, setFact] = useState("");
+  const clickHandler = (event) => {
+    event.preventDefault();
+    fetch("https://catfact.ninja/fact/").then(resp => resp.json()).then((resp) => {
+      let singleFact = resp.fact;
+      setFact(singleFact);
+    })
+    console.log(fact);
+  }
+
+  const endHandler = (event) => {
+    event.preventDefault();
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className='fact' onTouchEnd={endHandler} onTouchStart={clickHandler} onClick={clickHandler}>Fact</h1>
+      <p className='fact-text'>{fact}</p>
     </div>
   );
 }

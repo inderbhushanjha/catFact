@@ -1,13 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Love+Light&family=Loved+by+the+King&family=Square+Peg&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to bottom right, #ff48b6, #ff7e6c);
+  background-attachment: fixed;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.fact-text {
+  font-family: "Fredoka", sans-serif;
+  font-family: "Love Light", cursive;
+  font-family: "Loved by the King", cursive;
+  font-family: "Square Peg", cursive;
+  color: white;
+  font-size: 70px;
+  margin-top: 50px;
+}
+
+.fact {
+  font-size: 50px;
+  cursor: pointer;
 }
