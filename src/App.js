@@ -5,6 +5,7 @@ function App() {
   const [fact, setFact] = useState("");
   const clickHandler = (event) => {
     event.preventDefault();
+    console.log("empty");
     fetch("https://catfact.ninja/fact/").then(resp => resp.json()).then((resp) => {
       let singleFact = resp.fact;
       setFact(singleFact);
